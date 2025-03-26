@@ -2,7 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <conio.h>
+// 좌표 입력 받을 때 사용 touuper
 #include <ctype.h>
+#include <time.h>
 
 // 상태(x,y) : Open/Hide/Flag
 // 인접지뢰수(x,y) : 0~8, 9는 지뢰를 나타낸다.
@@ -29,6 +31,9 @@ int& nearMine(int x, int y) { return MapMine[y][x]; }
 
 bool isValid(int x, int y) {
     return x < 9 && x >= 0 && y < 9 && y >= 0;
+}
+bool isMine(int x, int y) {
+    return isValid(x, y) && state(x, y) == Bomb
 }
 
 // 입력받은 좌표를 여는 함수
@@ -75,11 +80,87 @@ bool getLocation(int& x, int& y) {
         isFlagMode = true;
 
         // 입력받은 첫 번째 문자를 isFlagMode 변경에 사용했기 때문에 다시 y 좌표 입력받기
-        y = toupper(_getche()) - 'A';
+        y = toupper(_getch()) - 'A';
     }
 
     // x 좌표 입력받기
     x = _getch() - '1';
 
     return isFlagMode;
+}
+
+int getFlagCount() {
+    // 깃발 수를 세는 변수 count
+    int count = 0;
+    // 0~8번의 모든 행과 열의 좌표에 대해서 반복
+    for (int y = 0; y < 9; y++) {
+        for (int x = 0; x < 9; x++) {
+            if (state(x, y) == Flag) {
+                count++;
+            }
+        }
+    }
+    return count;
+}
+
+// x, y 좌표와 인접한 8칸에 대해 지뢰 수를 count
+void countNearMine(int x, int y) {
+    int count = 0;
+    for (int dx = x - 1; dx <= x + 1; dx++) {
+        for (int dy = y - 1; dy <= y + 1; dy++) {
+            if (isMine(x, y)) {
+                count++;
+            }
+        }
+    }
+    nearMine(x, y) = count;
+}
+
+void resetGame(int Level = 1) {
+    srand((int unsigned)time(NULL));
+
+    int Bombs = 0;
+
+    for (int y = 0; y < 9; y++) {
+        for (int x = 0; x < 9; x++) {
+            state(x, y) = Hide;
+            nearMine(x, y) = 0;
+        }
+    }
+
+    switch (Level) {
+    case 1:
+        Bombs = 10;
+        break;
+    case 2:
+        Bombs = 20;
+        break;
+    case 3:
+        Bombs = 30;
+        break;
+    default :
+		Bombs = 10;
+		break;
+    }
+
+    // nearMine(x, y)에 지뢰를 랜덤하게 생성
+    for (int i = 0; i < Bombs; i++) {
+        int x, y;
+        do {
+            x = rand() % 9;
+            y = rand() % 9;        
+            // 이미 지뢰가 있는 경우 다시 랜덤 좌표 생성
+        } while (nearMine(x, y) == Bomb);  // 해당 조건식인 true이면 do 내부 문장 다시 실행
+        nearMine(x, y) = Bomb;
+    }
+        
+    // state(x, y)에 인접한 지뢰 수 저장, 모든 좌표에 대해서 반복
+    for (int y = 0; y < 9; y++) {
+		for (int x = 0; x < 9; x++) {
+            // 해당 좌표가 지뢰가 아닌 경우에만
+            if (nearMine(x, y) != Bomb) {
+                countNearMine(x, y);
+            }
+		}
+	}
 }
