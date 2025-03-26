@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\MyMineSweeper\\MyMineSweeper\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|solutionrelative:MyMineSweeper\\MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|solutionrelative:MyMineSweeper\\MyMineSweeperMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyMineSweeperMain.cpp",
+              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp",
+              "RelativeDocumentMoniker": "MyMineSweeper\\MyMineSweeperMain.cpp",
+              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp",
+              "RelativeToolTip": "MyMineSweeper\\MyMineSweeperMain.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-23T23:14:38.548Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MineSweeper.cpp",
+              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp",
+              "RelativeDocumentMoniker": "MyMineSweeper\\MineSweeper.cpp",
+              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp",
+              "RelativeToolTip": "MyMineSweeper\\MineSweeper.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-03-23T23:10:22.677Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
