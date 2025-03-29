@@ -1,2 +1,5 @@
 ﻿  MineSweeper.cpp
-  MyMineSweeper.vcxproj -> D:\MyMineSweeper\MyMineSweeper\x64\Debug\MyMineSweeper.exe
+  MyMineSweeperMain.cpp
+  코드를 생성하고 있습니다...
+D:\MyMineSweeper\MyMineSweeper\MyMineSweeperMain.cpp(3,6): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  MyMineSweeper.vcxproj -> D:\MyMineSweeper\x64\Debug\MyMineSweeper.exe

@@ -130,6 +130,9 @@
     <ClCompile Include="MineSweeper.cpp" />
     <ClCompile Include="MyMineSweeperMain.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MineSweeper.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

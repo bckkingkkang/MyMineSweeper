@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\MyMineSweeper\\MyMineSweeper\\",
+  "WorkspaceRootPath": "D:\\MyMineSweeper\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|solutionrelative:MyMineSweeper\\MineSweeper.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|solutionrelative:MyMineSweeper\\MyMineSweeperMain.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|D:\\MyMineSweeper\\MyMineSweeper\\MineSweeper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B91194F3-F6F6-4110-8345-9BDF41A82370}|MyMineSweeper\\MyMineSweeper.vcxproj|solutionrelative:MyMineSweeper\\MineSweeper.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,13 +46,26 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MineSweeper.h",
+              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MineSweeper.h",
+              "RelativeDocumentMoniker": "MyMineSweeper\\MineSweeper.h",
+              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MineSweeper.h",
+              "RelativeToolTip": "MyMineSweeper\\MineSweeper.h",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-03-29T22:22:44.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "MyMineSweeperMain.cpp",
-              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp",
+              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp",
               "RelativeDocumentMoniker": "MyMineSweeper\\MyMineSweeperMain.cpp",
-              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp",
+              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeperMain.cpp",
               "RelativeToolTip": "MyMineSweeper\\MyMineSweeperMain.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-23T23:14:38.548Z",
               "EditorCaption": ""
@@ -57,11 +74,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "MineSweeper.cpp",
-              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp",
+              "DocumentMoniker": "D:\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp",
               "RelativeDocumentMoniker": "MyMineSweeper\\MineSweeper.cpp",
-              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp",
+              "ToolTip": "D:\\MyMineSweeper\\MyMineSweeper\\MineSweeper.cpp",
               "RelativeToolTip": "MyMineSweeper\\MineSweeper.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
+              "ViewState": "AQIAAPkAAAAAAAAAAAAAAAUBAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-03-23T23:10:22.677Z",
               "EditorCaption": ""
