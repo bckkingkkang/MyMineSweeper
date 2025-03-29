@@ -226,3 +226,68 @@ void print() {
         printf("\n");
     }
 }
+
+// 게임 종료 검사 함수
+enum FinishType {
+	gameWin,
+	gameLose,
+	gameContinue
+};
+int isFinish() {
+    // 열리지 않은 좌표를 세는 변수 count
+    int count = 0;
+    
+    // 모든 x, y 좌표에 대해
+    for (int y = 0; y < 9; y++) {
+        for (int x = 0; x < 9; x++) {
+            // 해당 좌표가 열리지 않았다면
+            if (state(x, y) != Open) {
+                count++;
+            }
+            // 해당 좌표가 열려 있는 경우
+            else {
+                
+                if (isMine(x, y)) {
+                    return gameLose;
+                }
+            }
+        }
+    }
+    
+    return count == totalBombs ? gameWin : gameContinue;    
+}
+
+// 게임 실행 함수
+void playMineSweeper(int Level) {
+    int x, y;
+
+    // 전달 받은 게임의 난이도(Level)로 게임 초기화
+    resetGame(Level);
+
+    // isFinish() 함수가 gameContinue인 경우 반복
+    do {
+        // 맵을 화면에 출력
+        print();
+
+        // 좌표를 입력받고 Flag 모드인지 확인
+        bool isFlagMode = getLocation(x, y);
+        if (isFlagMode) {
+            // Flag 모드라면 flag() 함수 호출
+            flag(x, y);
+        }
+        else {
+            // Flag 모드가 아니라면 dig() 함수 호출
+            dig(x, y);
+        }
+        
+    } while (isFinish() == gameContinue);
+
+    // 게임 종료 후 맵을 한 번 더 출력
+    print();
+    if (isFinish() == gameWin) {
+        printf("[ **게임 성공** 지뢰를 모두 찾았습니다. ]\n");
+    }
+    else {
+        printf("[ **게임 실패** 지뢰를 밟았습니다. ]\n");
+    }
+}
