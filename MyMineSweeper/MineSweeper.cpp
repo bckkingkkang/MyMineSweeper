@@ -5,6 +5,7 @@
 // 좌표 입력 받을 때 사용 touuper
 #include <ctype.h>
 #include <time.h>
+#include <windows.h>
 
 // 상태(x,y) : Open/Hide/Flag
 // 인접지뢰수(x,y) : 0~8, 9는 지뢰를 나타낸다.
@@ -33,8 +34,11 @@ bool isValid(int x, int y) {
     return x < 9 && x >= 0 && y < 9 && y >= 0;
 }
 bool isMine(int x, int y) {
-    return isValid(x, y) && state(x, y) == Bomb
+    return isValid(x, y) && nearMine(x, y) == Bomb;
 }
+
+int totalBombs = 10;
+int Level = 1;
 
 // 입력받은 좌표를 여는 함수
 void dig(int x, int y)
@@ -108,7 +112,7 @@ void countNearMine(int x, int y) {
     int count = 0;
     for (int dx = x - 1; dx <= x + 1; dx++) {
         for (int dy = y - 1; dy <= y + 1; dy++) {
-            if (isMine(x, y)) {
+            if (isMine(dx, dy)) {
                 count++;
             }
         }
@@ -143,6 +147,8 @@ void resetGame(int Level = 1) {
 		break;
     }
 
+    totalBombs = Bombs;
+
     // nearMine(x, y)에 지뢰를 랜덤하게 생성
     for (int i = 0; i < Bombs; i++) {
         int x, y;
@@ -163,4 +169,60 @@ void resetGame(int Level = 1) {
             }
 		}
 	}
+}
+
+
+// 지뢰 맵 print() 함수
+void print() {
+    // 전체 지뢰수와 발견한 지뢰 수 출력
+    printf("발견(%d)/총 지뢰(%d)\n", getFlagCount(), totalBombs);
+
+    // 열 라벨 표시
+    printf("  ① ② ③ ④ ⑤ ⑥ ⑦ ⑧ ⑨\n");
+
+    for (int y = 0; y < 9; y++) {
+        // 행 라벨 표시
+        printf("%c ", 'A' + y);	// ASCII 코드로 변환하여 출력
+
+        // [y][x] 모든 좌표 값에 대해
+        for (int x = 0; x < 9; x++) {
+            // Hide(파지 않은) 상태인 곳이라면
+            if (state(x, y) == Hide) {
+                printf("■ ");
+            }
+            // Flag 상태(지뢰 예상 자리)인 경우
+            else if (state(x, y) == Flag) {
+                // 현재 콘솔 코드 페이지 저장
+                UINT oldCP = GetConsoleOutputCP();
+                // 인코딩 유니코드로 변경
+                SetConsoleOutputCP(65001);
+                // 깃발 출력
+                printf(u8"\u2690 ");
+                // 한글 인코딩 깨지지 않도록 이전 코드 페이지로 되돌려놓는다
+                SetConsoleOutputCP(oldCP);
+            }
+            // open 상태인 곳에 대해 if
+            else {
+                // 지뢰인 좌표라면
+                if (nearMine(x, y) == Bomb) {
+                    // 현재 콘솔 코드 페이지 저장
+                    UINT oldCP = GetConsoleOutputCP();
+                    // 인코딩 유니코드로 변경
+                    SetConsoleOutputCP(65001);
+                    // 폭탄 출력
+                    printf(u8"\u2620 ");
+                    // 한글 인코딩 깨지지 않도록 이전 코드 페이지로 되돌려놓는다
+                    SetConsoleOutputCP(oldCP);
+                }
+                // 지뢰가 아닌 좌표라면
+                else if (nearMine(x, y)==Empty) {
+                    printf("□ ");
+                }
+                else {
+                    printf("%2d ", nearMine(x, y));
+                }
+            }
+        }
+        printf("\n");
+    }
 }
